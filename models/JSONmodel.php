@@ -1,7 +1,7 @@
 <?php
   // This will grab and decode the JSON data from the provided url
   function getJSONdata() {
-    $url = "http://m.lowes.com/CatalogServices/product/nvalue/v1_0?nValue=4294857975&maxResults=6&showURL=1&rollUpVariants=1&showUrl=true&storeNumber=0595&priceFlag=rangeBalance&showMarketingBullets=1";
+    $url = "https://m.lowes.com/CatalogServices/product/nvalue/v1_0?nValue=4294857975&maxResults=6&showURL=1&rollUpVariants=1&showUrl=true&storeNumber=0595&priceFlag=rangeBalance&showMarketingBullets=1";
     $response = file_get_contents($url);
     // Make the JSON a php array
     $response = json_decode($response, true);
@@ -19,7 +19,8 @@
             "images" => $prod['imageUrls']
         );
       }
+      return $data;
     }
+    return FALSE;
 
-    return $data;
   }

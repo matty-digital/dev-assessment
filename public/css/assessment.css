@@ -1,0 +1,211 @@
+/*
+  CSS variables based off the root element, and font-size
+  hack to use rem on text and have it act as px i.e. 1.2rem is
+  equivalent to 12px, but looks good on multiple screens
+*/
+html {
+  --item-bg: #e5e5e5;
+  --border-color: #9e9e9e;
+  --btn-bg: #b7b7b7;
+  --txt-color: #676767;
+  font-size: 62.5%!important;
+}
+
+html * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tahoma, Geneva, sans-serif!important;
+}
+
+main {
+  margin: 20px 15px 10px;
+}
+
+/* Styles for the product grid */
+.items ul {
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.items ul li {
+  text-align: center;
+  border: 2px solid var(--border-color);
+  background: var(--item-bg);
+  margin: 0 10px 20px;
+  padding: 15px;
+  /* Large and medium screens, 3 per row */
+  flex: 1 30%;
+}
+
+/* Styles for each product */
+.prod-desc {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  min-height: 50px;
+}
+
+.prod-price, .hero-prod-price {
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.prod-image {
+  margin: 30px 0;
+  display: inline-block;
+  padding: 15px 5px;
+  background: #fff;
+}
+
+.items ul.hidden-bullets {
+  display: block;
+}
+
+.items ul.hidden-bullets li {
+  text-align: left;
+  font-size: 1.4rem;
+  border: none;
+  margin-bottom: 10px;
+  flex: 0;
+  background: none;
+}
+
+.view-more, .atc-btn {
+  --wbkit-appearance: none;
+  appearance: none;
+  border: 1px solid #000;
+  width: 100%;
+  background: var(--btn-bg);
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 1.7rem;
+  display: block;
+  text-align: center;
+}
+
+/*hero item styles*/
+.hero {
+  border: 2px solid var(--border-color);
+  background: var(--item-bg);
+  margin: 0 10px 20px;
+  padding: 10px 20px;
+  display: flex;
+}
+
+.hero > div {
+  flex: 1;
+}
+
+.hero > div.hero-desc {
+  flex: 2;
+  padding: 10px 10px 0;
+}
+
+.hero-price {
+  padding: 15px 10px 0 0;
+}
+
+.hero-img {
+  text-align: center;
+}
+
+.img-holder {
+  background: #fff;
+  display: inline-block;
+  padding: 10% 0;
+}
+
+.hero-desc p {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.marketing-bullets {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+
+.marketing-bullets li {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.atc-btn {
+  font-weight: normal;
+  font-size: 1.4rem;
+  padding: 10px 0;
+  margin-bottom: 30px;
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .hero {
+    margin: 0 5px 10px;
+  }
+  /*Only have two in a row on smaller screens, good for UI*/
+  /*Maybe one row for really small devices*/
+  .items ul li {
+    flex: 1 45%;
+    margin: 0 5px 10px;
+  }
+
+  .prod-desc {
+    min-height: 95px;
+  }
+
+  .prod-price, .view-more {
+    font-size: 1.5rem;
+  }
+
+  .prod-image {
+    margin: 10px 0 20px;
+  }
+
+  .hero {
+    display: block!important;
+  }
+
+  .hero-desc {
+    padding: 10px 0;
+  }
+
+  .reveal-modal {
+    width: 300px;
+    margin-left: -150px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .prod-desc {
+    min-height: 75px;
+    font-size: 1.4rem;
+  }
+
+  .reveal-modal {
+    width: 280px;
+    margin-left: -140px;
+  }
+
+  .hero-price {
+    padding: 15px 0 0;
+  }
+}
+
+.price-modal p {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.price-modal p:last-of-type {
+  color: red;
+  margin-top: 20px;
+}
+
+.hidden-price {
+  display: none;
+}

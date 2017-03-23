@@ -5,7 +5,6 @@
 
 <!DOCTYPE html>
 <html>
-  <!-- Keep styles, meta, etc in it's own file to keep it clean and organized -->
   <?php include_once '../views/includes/head.php'; ?>
 
   <body>
