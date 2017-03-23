@@ -1,6 +1,6 @@
 <?php
   include('../models/JSONmodel.php');
-  parseJSONdata();
+  $data = getJSONdata();
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
 
   <body>
 
-    <?php include_once '../includes/content.php'; ?>
+    <?php include_once '../views/includes/content.php'; ?>
 
     <!-- Same thing for scripts, but including them further down for page speed -->
     <?php include_once '../views/includes/scripts.php'; ?>
