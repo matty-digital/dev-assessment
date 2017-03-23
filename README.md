@@ -10,7 +10,7 @@ Matt Bowytz Developer Asessment
 
 ## Run
 - Get apache running and place this directory in the htdocs (or web or whatever you call yours)
-- .htaccess is handling the landing page so just going to `/dev/assessment/` should do the tricks
+- .htaccess is handling the landing page so just going to `/dev-assessment/` should do the tricks
 
 Please let me know if you have any questions.
 
